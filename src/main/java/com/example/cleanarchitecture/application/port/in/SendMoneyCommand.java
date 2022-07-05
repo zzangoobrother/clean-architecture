@@ -1,6 +1,6 @@
 package com.example.cleanarchitecture.application.port.in;
 
-import com.example.cleanarchitecture.domain.AccountId;
+import com.example.cleanarchitecture.domain.Account.AccountId;
 import com.example.cleanarchitecture.domain.Money;
 import com.example.cleanarchitecture.shared.SelfValidating;
 import javax.validation.constraints.NotNull;

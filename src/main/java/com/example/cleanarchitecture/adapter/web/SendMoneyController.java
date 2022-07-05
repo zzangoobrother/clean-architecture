@@ -2,7 +2,7 @@ package com.example.cleanarchitecture.adapter.web;
 
 import com.example.cleanarchitecture.application.port.in.SendMoneyCommand;
 import com.example.cleanarchitecture.application.port.in.SendMoneyUseCase;
-import com.example.cleanarchitecture.domain.AccountId;
+import com.example.cleanarchitecture.domain.Account.AccountId;
 import com.example.cleanarchitecture.domain.Money;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;
