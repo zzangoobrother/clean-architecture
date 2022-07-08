@@ -1,12 +1,10 @@
 package com.example.cleanarchitecture.domain;
 
 import java.time.LocalDateTime;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Value;
 
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Account {
 
   @Getter
@@ -15,6 +13,13 @@ public class Account {
   private Money baselineBalance;
   @Getter
   private ActivityWindow activityWindow;
+
+  @Builder
+  public Account(AccountId accountId, Money baselineBalance, ActivityWindow activityWindow) {
+    this.id = accountId;
+    this.baselineBalance = baselineBalance;
+    this.activityWindow = activityWindow;
+  }
 
   public static Account withoutId(Money baselineBalance, ActivityWindow activityWindow) {
     return new Account(null, baselineBalance, activityWindow);

@@ -2,13 +2,16 @@ package com.example.cleanarchitecture.application.service;
 
 import com.example.cleanarchitecture.application.port.in.SendMoneyCommand;
 import com.example.cleanarchitecture.application.port.in.SendMoneyUseCase;
+import com.example.cleanarchitecture.application.port.out.AccountLock;
 import com.example.cleanarchitecture.application.port.out.LoadAccountPort;
 import com.example.cleanarchitecture.application.port.out.UpdateAccountStatePort;
+import com.example.cleanarchitecture.shared.UseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @Transactional
+@UseCase
 public class SendMoneyService implements SendMoneyUseCase {
 
   private final LoadAccountPort loadAccountPort;

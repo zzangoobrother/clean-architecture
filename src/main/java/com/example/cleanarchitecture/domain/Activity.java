@@ -1,9 +1,8 @@
 package com.example.cleanarchitecture.domain;
 
-import static com.example.cleanarchitecture.domain.Account.*;
-
 import com.example.cleanarchitecture.domain.Account.AccountId;
 import java.time.LocalDateTime;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -36,6 +35,7 @@ public class Activity {
   @NonNull
   private final Money money;
 
+  @Builder
   public Activity(@NonNull AccountId ownerAccountId, AccountId sourceAccountId, AccountId targetAccountId,
       LocalDateTime timestamp, Money money) {
     this.id = null;

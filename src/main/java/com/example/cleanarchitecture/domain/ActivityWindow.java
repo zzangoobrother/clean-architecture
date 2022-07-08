@@ -1,13 +1,14 @@
 package com.example.cleanarchitecture.domain;
 
 import com.example.cleanarchitecture.domain.Account.AccountId;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import lombok.NonNull;
 
 public class ActivityWindow {
 
-  private List<Activity> activities;
+  private List<Activity> activities = new ArrayList<>();
 
   public ActivityWindow(@NonNull List<Activity> activities) {
     this.activities = activities;
