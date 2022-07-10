@@ -4,9 +4,11 @@ import com.example.cleanarchitecture.domain.Account.AccountId;
 import com.example.cleanarchitecture.domain.Money;
 import com.example.cleanarchitecture.shared.SelfValidating;
 import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @Getter
+@EqualsAndHashCode
 public class SendMoneyCommand extends SelfValidating<SendMoneyCommand> {
 
   @NotNull
