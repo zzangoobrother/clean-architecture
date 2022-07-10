@@ -1,6 +1,7 @@
 package com.example.cleanarchitecture.domain;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Value;
@@ -65,6 +66,10 @@ public class Account {
 
     this.activityWindow.addActivity(deposit);
     return true;
+  }
+
+  public Optional<AccountId> getId() {
+    return Optional.ofNullable(this.id);
   }
 
   @Value

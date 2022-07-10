@@ -12,6 +12,14 @@ public class Money {
   @NotNull
   private final BigInteger amount;
 
+  public boolean isGreaterThanOrEqualTo(Money money) {
+    return this.amount.compareTo(money.amount) >= 0;
+  }
+
+  public boolean isGreaterThan(Money money) {
+    return this.amount.compareTo(money.amount) >= 1;
+  }
+
   public static Money add(Money baselineBalance, Money calculateBalance) {
     return new Money(baselineBalance.amount.add(calculateBalance.amount));
   }
