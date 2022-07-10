@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.Value;
 
 @Value
+@Builder
 @RequiredArgsConstructor
 public class Activity {
 
